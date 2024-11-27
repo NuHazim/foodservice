@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Campus Eats</title>
+    <link rel="stylesheet" href="diningOptionStyles.css">
+    <script>
+        // JavaScript to Randomly Display Driver Availability Message
+        function checkDriverAvailability() {
+            const driverAvailable = Math.random() > 0.2; // 80% chance driver is available
+            const messageBox = document.getElementById("driver-availability");
+            const driverText = document.getElementById("driver-text");
+            const driverIcon = document.getElementById("driver-icon");
+    
+            if (driverAvailable) {
+                // Driver Available
+                messageBox.className = "driver-available"; // Add green box styling
+                driverText.textContent = "Good news! Driver is available.";
+                driverIcon.src = "diningOptionImages/greenbell.png"; // Path to the available icon
+                driverIcon.alt = "Driver Available Icon";
+            } else {
+                // Driver Not Available
+                messageBox.className = "driver-not-available"; // Add red box styling
+                driverText.textContent = "Sorry! No nearby driver.";
+                driverIcon.src = "diningOptionImages/redbell.png"; // Path to the unavailable icon
+                driverIcon.alt = "Driver Unavailable Icon";
+            }
+        }
+
+         // Function to handle checkout action
+         function handleCheckout(event) {
+            const messageBox = document.getElementById("driver-availability");
+
+            // Check if the message box has the class for 'Driver Not Available'
+            if (messageBox.classList.contains("driver-not-available")) {
+                // If no driver is available, prevent the form submission and alert the user
+                event.preventDefault(); // Prevent the form from submitting
+                alert("Sorry! No nearby driver. Please try again later.");
+            }
+            // Else, proceed with the checkout
+        }
+
+        // Run function after page loads
+        window.onload = checkDriverAvailability;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Delivery</h1>
+        </header>
+        <main>
+            <form class="form-section" onsubmit="handleCheckout(event)">
+                <!-- Delivery Date -->
+                <div class="form-group">
+                    <label for="delivery-date">Select Delivery Date:</label>
+                    <input type="date" id="delivery-date" name="delivery-date" required>
+                </div>
+
+                <!-- Delivery Time -->
+                <div class="form-group">
+                    <label for="delivery-time">Select Delivery Time:</label>
+                    <input type="time" id="delivery-time" name="delivery-time" required>
+                </div>
+
+                <!-- Special Remarks -->
+                <div class="form-group">
+                    <label for="remarks">Special Remarks:</label>
+                    <textarea id="remarks" name="remarks" rows="4" placeholder="Enter any special requests..."></textarea>
+                </div>
+
+                <!-- Packaging Option -->
+                <div class="form-group">
+                    <label for="packaging">Packaging:</label>
+                    <select id="packaging" name="packaging" required>
+                        <option value="normal">Normal</option>
+                        <option value="reusable">Reusable Container (+RM 2.00)</option>
+                    </select>
+                    <p class="info-text">* Returned reusable containers are eligible for a rebate.</p>
+                </div>
+
+                <!-- Driver Availability -->
+                <div id="driver-availability" class="driver-message">
+                    <img id="driver-icon" src="" alt="Notification Icon" class="driver-icon">
+                    <span id="driver-text"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-btn">Proceed to Checkout</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
+
+
+

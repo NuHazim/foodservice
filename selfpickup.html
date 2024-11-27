@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Pickup - Campus Eats</title>
+    <link rel="stylesheet" href="diningOptionStyles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Self Pickup</h1>
+        </header>
+        <main>
+            <form class="form-section">
+                <!-- Pickup Date -->
+                <div class="form-group">
+                    <label for="pickup-date">Select Pickup Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                </div>
+
+                <!-- Pickup Time -->
+                <div class="form-group">
+                    <label for="pickup-time">Select Pickup Time:</label>
+                    <input type="time" id="pickup-time" name="pickup-time" required>
+                </div>
+
+                <!-- Special Remarks -->
+                <div class="form-group">
+                    <label for="remarks">Special Remarks:</label>
+                    <textarea id="remarks" name="remarks" rows="4" placeholder="Enter any special requests..."></textarea>
+                </div>
+
+                <!-- Packaging Option -->
+                <div class="form-group">
+                    <label for="packaging">Packaging:</label>
+                    <select id="packaging" name="packaging" required>
+                        <option value="normal">Normal</option>
+                        <option value="reusable">Reusable Container (+RM 2.00)</option>
+                    </select>
+                    <p class="info-text">* Returned reusable containers are eligible for a rebate.</p>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-btn">Proceed to Checkout</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+

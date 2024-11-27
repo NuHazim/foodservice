@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine In - Campus Eats</title>
+    <link rel="stylesheet" href="diningOptionStyles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dine In</h1>
+        </header>
+        <main>
+            <form class="form-section">
+                <!-- Dining Date -->
+                <div class="form-group">
+                    <label for="date">Select Dining Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <!-- Time Slot -->
+                <div class="form-group">
+                    <label for="time">Select Time Slot:</label>
+                    <select id="time" name="time" required>
+                        <option value="10am-11am">10 AM - 11 AM</option>
+                        <option value="11am-12pm">11 AM - 12 PM</option>
+                        <option value="12pm-1pm">12 PM - 1 PM</option>
+                        <option value="1pm-2pm">1 PM - 2 PM</option>
+                        <option value="2pm-3pm">2 PM - 3 PM</option>
+                        <option value="3pm-4pm">3 PM - 4 PM</option>
+                        <option value="5pm-6pm">5 PM - 6 PM</option>
+                        <option value="6pm-7pm">6 PM - 7 PM</option>
+                        <option value="7pm-8pm">7 PM - 8 PM</option>
+                        <option value="8pm-9pm">8 PM - 9 PM</option>
+                    </select>
+                </div>
+
+                <!-- Number of Pax -->
+                <div class="form-group">
+                    <label for="pax">Number of Pax:</label>
+                    <input type="number" id="pax" name="pax" min="1" max="10" required>
+                </div>
+
+                <!-- Special Remarks -->
+                <div class="form-group">
+                    <label for="remarks">Special Remarks:</label>
+                    <textarea id="remarks" name="remarks" rows="4" placeholder="Enter any special requests..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="form-btn">Proceed to Checkout</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,215 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff4e1; 
+    color: #4a4a4a;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    width: 90%; /* Make it responsive with a 90% width */
+    margin: 0 auto;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling the light brown box for the header */
+.header-box {
+    background-color: #fcdaabf3;  /* Light brown color */
+    padding: 15px 30px;  /* Add padding inside the box */
+    border-radius: 10px;  /* Rounded corners */
+    display: inline-block;  /* Ensure it wraps tightly around the text */
+    margin-bottom: 20px;  /* Space below the box */
+}
+
+header h1 {
+    font-size: 3rem;  /* Increased font size */
+    color: #630404;  /* White text color for contrast */
+    margin: 0;  /* Remove default margin */
+    font-family: 'Lora', serif;  /* Custom font */
+    text-align: center;  /* Center text */
+}
+
+/* Yellow Box Styling for Each Option */
+.yellow-box {
+    background-color: #f0bf43; /* Yellow background */
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px; /* Define a fixed width for the box */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a lifted effect */
+    transition: transform 0.2s ease-in-out; /* Add smooth transition effect */
+}
+
+.yellow-box:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovered */
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: #8e7754;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #6e5a42;
+    transform: scale(1.05);
+}
+
+/* Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    margin-top: 5px;
+}
+
+.driver-status {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #6e5a42;
+}
+
+/* Proceed to Checkout Button with Gradient */
+.form-btn {
+    align-self: center;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white; /* White text for contrast */
+    background: linear-gradient(to right, #007BFF, #02b9de); /* Blue gradient */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+/* Hover Effect with Darker Gradient */
+.form-btn:hover {
+    background: linear-gradient(to right, #0056b3, #008bb3); /* Darker blue gradient */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Styling for Driver Message Container */
+.driver-message {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+    gap: 20px; /* Space between icon and text */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Green Box for Driver Available */
+.driver-available {
+    background-color: #e0f8e0; /* Light green background */
+    color: #2e7d32; /* Dark green text */
+    border: 2px solid #2e7d32;
+}
+
+/* Red Box for Driver Not Available */
+.driver-not-available {
+    background-color: #f8e0e0; /* Light red background */
+    color: #d32f2f; /* Dark red text */
+    border: 2px solid #d32f2f;
+}
+
+/* Icon Styling */
+.driver-icon {
+    width: 20px; /* Small icon size */
+    height: 20px;
+}
+
+/* Container for each option */
+.option-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.option-item {
+    text-align: center;
+    max-width: 250px; /* Ensure the option box doesn't get too wide */
+}
+
+/* Styling for the Option Button */
+.nav-btn {
+    padding: 15px 25px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    background: #8e7754;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    width: 100%;
+}
+
+.nav-btn:hover {
+    background: #6e5a42;
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.option-img {
+    width: 250px; /* Set image width to fit the button's design */
+    height: auto;
+    margin-top: 10px;
+    max-height: 250px; /* Ensure images are not too tall */
+    object-fit: contain; /* Make sure the image is not distorted */
+}
+
