@@ -27,12 +27,23 @@
                 driverIcon.alt = "Driver Unavailable Icon";
             }
         }
-    
+
+         // Function to handle checkout action
+         function handleCheckout(event) {
+            const messageBox = document.getElementById("driver-availability");
+
+            // Check if the message box has the class for 'Driver Not Available'
+            if (messageBox.classList.contains("driver-not-available")) {
+                // If no driver is available, prevent the form submission and alert the user
+                event.preventDefault(); // Prevent the form from submitting
+                alert("Sorry! No nearby driver. Please try again later.");
+            }
+            // Else, proceed with the checkout
+        }
+
         // Run function after page loads
         window.onload = checkDriverAvailability;
     </script>
-    
-    
 </head>
 <body>
     <div class="container">
@@ -40,7 +51,7 @@
             <h1>Delivery</h1>
         </header>
         <main>
-            <form class="form-section">
+            <form class="form-section" onsubmit="handleCheckout(event)">
                 <!-- Delivery Date -->
                 <div class="form-group">
                     <label for="delivery-date">Select Delivery Date:</label>
