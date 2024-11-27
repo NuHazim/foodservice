@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER YOUR FOOD</title>
+    <link rel="stylesheet" href="style_order.css">
+</head>
+<body>
+    <header>
+        <h1>ORDER YOUR FOOD!</h1>
+        <a href="#" class="cart">
+            <span>🛒</span>
+            <span class="cart-count">0</span>
+        </a>    </header>
+    <main>
+        <div class="product-container">
+            <img src="burger.jpg" alt="Burger" class="product-image">
+            <div class="product-details">
+                <h2 class="product-title">BURGER</h2>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span class="quantity-count">1</span>
+                    <button class="plus">+</button>
+                </div>
+                <input type="text" placeholder="Special Remark" class="special-remark">
+                <div class="donation">
+                    <span>Donation:</span>
+                    <input type="number" class="donation-input" placeholder="Enter donation amount" min="0" step="1">
+                </div>
+                <div class="price">
+                    <span>Price:</span>
+                    <strong class="total-price">RM12.00</strong>
+                </div>
+
+                
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    //make cart empty after refreshing
+    localStorage.removeItem("cart");
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const minusBtn = document.querySelector(".minus");
+    const plusBtn = document.querySelector(".plus");
+    const quantityCount = document.querySelector(".quantity-count");
+    const cartCount = document.querySelector(".cart-count");
+    const addToCartBtn = document.querySelector(".add-to-cart");
+    const donationInput = document.querySelector(".donation-input");
+    const totalPriceEl = document.querySelector(".total-price");
+
+    let basePrice = 12.0; // Base price of the burger
+    let quantity = 1;
+
+    // Function to update the total price
+    const updateTotalPrice = () => {
+        const donation = parseFloat(donationInput.value) || 0; // Default to 0 if no input
+        const totalPrice = (basePrice * quantity) + donation;
+        totalPriceEl.textContent = `RM${totalPrice.toFixed(2)}`;
+    };
+
+    // Function to update the cart count in the icon
+    const updateCartCount = () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || { items: [] };
+        const totalItems = cart.items.reduce((count, item) => count + item.quantity, 0);
+        cartCount.textContent = totalItems; // Update cart icon count
+    };
+
+    // Handle quantity decrement
+    minusBtn.addEventListener("click", () => {
+        if (quantity > 1) {
+            quantity--;
+            quantityCount.textContent = quantity;
+            updateTotalPrice();
+        }
+    });
+
+    // Handle quantity increment
+    plusBtn.addEventListener("click", () => {
+        quantity++;
+        quantityCount.textContent = quantity;
+        updateTotalPrice();
+    });
+
+    // Update total price on donation input
+    donationInput.addEventListener("input", updateTotalPrice);
+
+    // Add to cart button functionality
+    addToCartBtn.addEventListener("click", () => {
+        const donation = parseFloat(donationInput.value) || 0;
+        const totalPrice = (basePrice * quantity) + donation;
+
+        // Retrieve existing cart data from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || { items: [], total: 0 };
+
+        // Add burger item to the cart
+        cart.items.push({
+            name: "Burger",
+            quantity: quantity,
+            price: basePrice * quantity,
+            donation: donation
+        });
+
+        // Update total in the cart
+        cart.total += totalPrice;
+
+        // Save updated cart data back to localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Update cart count in the icon
+        updateCartCount();
+
+        alert(`Added to cart! Total: RM${totalPrice.toFixed(2)}`);
+    });
+
+    // Initialize total price and cart count on page load
+    updateTotalPrice();
+    updateCartCount();
+});
+
+</script>
+</html>
