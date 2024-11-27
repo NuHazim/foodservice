@@ -1,0 +1,46 @@
+html,body{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.header{
+    padding:5px;
+    margin:0;
+    height:100px;
+    background-color: #f8e0bd;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.buttons{
+    height:80px;
+    border-radius: 10px;
+    border:none;
+    background: none;
+    margin-right: 10px;
+    padding:10px 40px;
+    font-size: 20px;
+}
+.buttons:hover{
+    cursor: pointer;
+    background:white;
+    height:80px;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding:10px 40px;
+    font-size: 20px;
+}
+.buttonsspeacial{
+    margin-left: 80px;
+}
+.searchinput{
+    font-size: 25px;
+    position: absolute;
+    border:3px solid black;
+    border-radius: 20px;
+    padding:10px 30px;
+    height:60px;
+    left: 50px;
+    right:50px;
+    top:85px;
+}
