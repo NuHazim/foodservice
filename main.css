@@ -96,6 +96,10 @@ html,body{
     padding: 10px;
 }
 .filter{
+    margin-top: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
     position: fixed;
     top:140px;
     font-size: 1.5em;
@@ -130,4 +134,26 @@ html,body{
 .shops{
     grid-column: 4/end;
     grid-row: 3/end;
+}
+.allshops{
+    margin-top: 20px;
+    grid-column: 4/end;
+    grid-row: 1/end;
+    padding:10px;
+}
+.shop{
+    margin-top:20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.text{
+    font-size: 1.2em;
+}
+.shopimage{
+    border:2px solid black;
+    border-radius:20px;
+    margin:20px;
 }

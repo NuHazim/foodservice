@@ -15,9 +15,9 @@
         <a href="logout.html"><button class="buttonsspeacial">Logout</button></a>
         <img src="image1.png" width="80" height="80" style="border-radius: 50%;margin-bottom:20px;cursor:pointer;">
     </div>
-    <input class="searchinput" placeholder="Would you like to eat something" type="search">
+    <input class="searchinput" placeholder="Search for restaurants..." type="search">
     <div class="main">
-        <div class="filter">
+        <div class="filter" >
             <p><b>Sort by</b></p>
             <input type="radio" id="relevance" name="radios" class="filterradios"><label for="relevance">Relevance</label><br>
             <input type="radio" id="fdelivery" name="radios" class="filterradios"><label for="fdelivery">Fastest delivery</label><br>
@@ -31,6 +31,11 @@
             <input type="checkbox" class="filtercheckbox" id="deals"><label for="deals">Deals</label><br>
             <a href="shops.html"><button>Filter</button></a>
         </div>
+        <div class="allshops" >
+            <h2>Shops</h2>
+            <div id="shopcontainer"></div>
+        </div>
     </div>
+    <script src="shops.js"></script>
 </body>
 </html>
