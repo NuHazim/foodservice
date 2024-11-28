@@ -157,3 +157,48 @@ html,body{
     border-radius:20px;
     margin:20px;
 }
+.shopname:hover{
+    text-decoration: underline;
+}
+#foodboxs,#drinkboxs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.foodbox,.drinkbox{
+    border:2px solid black;
+    background-color: white;
+    text-align: center;
+    width:230px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 20px;
+}
+dialog{
+    width:1200px;
+    height:600px;
+    background-color: #f8e0bd;
+    padding:20px 40px;
+    border-radius: 20px;
+}
+#closeDialog{
+    position: absolute;
+    right:20px;
+    top:20px;
+    font-size: 2em;
+    padding:5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+#closeDialog:hover{
+    position: absolute;
+    right:20px;
+    top:20px;
+    font-size: 2em;
+    padding:5px 10px;
+    border-radius: 10px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
