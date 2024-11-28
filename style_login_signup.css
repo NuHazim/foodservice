@@ -1,0 +1,93 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdece4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Container */
+  .container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+  }
+    
+  /* Login Box */
+  .login-box {
+    background: #fff7ec;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 300px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  /* Title */
+  .login-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #000;
+  }
+  
+  /* Form */
+  form {
+    margin-top: 1rem;
+  }
+  
+  /* Labels */
+  form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  
+  /* Inputs */
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  /* Button */
+  form button {
+    width: 100%;
+    background-color: #d2a44b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #b98838;
+  }
+  
+  /* Links */
+  .link {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #6e9fc4;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
