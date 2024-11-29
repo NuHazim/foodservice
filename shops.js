@@ -7,31 +7,39 @@ let shops =  [
     ["ZusCoffee.png", "ZUS COFFEE", "⭐⭐⭐⭐", "Open time: 7:00AM - 10:40PM", "https://maps.app.goo.gl/hsgqSyDvURtnXLqt8", "<li>Vietnamese Spanish Latté Frappé</li><li>Mango Spanish Frappé</li><li>Big Brekkie Croissant</li><li>ZUS Signature Curry Puff</li>"],
     ["Q Bistro.png", "Q Bistro", "⭐⭐⭐⭐⭐", "Open time: 7:00AM - 10:00PM", "https://maps.app.goo.gl/VRKqDCDv9vmbN7DE8", "<li>Nasi Lemak Ayam Rendang</li><li>Nasi Goreng USA</li><li>Tom Yum Sup</li><li>Nasi Pattaya</li>"]
 ];
+let shopfiles=["kk5","kk12","kk4","kk2","he&she","Zus Coffee","Q bistro"];
 let foods= [
     ["Chicken chop", "Spaghetti Carbonara", "Spaghetti Bolognese", "Mushroom Spaghetti", "Lamb Chop", "Burger", "Jumbo Sausage", "Steak"],
-    ["Chicken chop", "Spaghetti", "Lamb Chop", "Burger", "Jumbo Sausage", "Shawarma Biasa", "Shawarma Cheese", "Shawarma Triple Cheese", "Shawarma Sausage", "Shawarma Rice", "Nasi Goreng Paprik Ayam", "Nasi Goreng Paprik Daging", "Nasi Goreng Biasa", "Nasi Goreng Thai", "Nasi Goreng Cili Padi", "Nasi Goreng Pattaya", "Maggi Goreng Biasa", "Maggi Goreng Ayam", "Maggi Goreng Daging", "Maggi Goreng Pattaya", "Roti Kosong", "Roti Telur", "Roti Tisu", "Roti Planta", "Roti Sarang Burung"],
+    ["Chicken chop", "Spaghetti", "Lamb Chop", "Burger", "Jumbo Sausage", "Shawarma Biasa", "Shawarma Cheese", "Shawarma Sausage", "Shawarma Rice", "Nasi Goreng Paprik Ayam", "Nasi Goreng Paprik Daging", "Nasi Goreng Biasa", "Nasi Goreng Thai", "Nasi Goreng Cili Padi", "Nasi Goreng Pattaya", "Maggi Goreng Biasa", "Maggi Goreng Ayam", "Maggi Goreng Daging", "Maggi Goreng Pattaya", "Roti Kosong", "Roti Telur", "Roti Tisu", "Roti Planta", "Roti Sarang Burung"],
     ["Malatang (vege)", "Malatang (non-vege)", "Supabowl (Vege)"],
     ["Nasi Goreng Tomyam", "Maggi Goreng Tomyam", "Tomyam Soup", "Nasi Goreng Pattaya", "Roti Kosong", "Roti Telur", "Roti Tisu", "Roti Planta", "Roti Sarang Burung"],
     ["Americano", "Cappuccino", "Latte", "Mocha", "Latte Ice", "Ice-blended Cappuccino", "Ice-blended Mocha", "Hot Chocolate", "Hot Matcha", "Chocolate Ice", "Matcha Ice", "Vanilla Ice", "Ice-blended Chocolate", "Ice-blended Matcha", "Ice-blended Vanilla"],
     ["Vietnamese Spanish Latté Frappé", "Mango Spanish Frappé", "Spanish Latté Frappé", "Ro-Ro-Rosie Frappé", "Rosie Latté", "Rosie Cham Latté", "Pumpkin Spice Frappé", "Pumpkin Spice Black", "Big Brekkie Croissant", "Pearl Sugar Waffle", "ZUS Signature Curry Puff", "Tom Yum Chicken Puff", "Chocolate Roll", "Chicken Slice & Cheese Croissant", "Mushroom Chicken Deluxe", "Strawberry Donut"],
-    ["Nasi Lemak Ayam Rendang", "Nasi Goreng USA", "Nasi Putih + Paprik Ayam", "Mee Rebus Sotong", "Nasi Goreng Kampung", "Tom Yum Sup", "Nasi Pattaya"]
+    ["Nasi Goreng USA", "Nasi Putih + Paprik Ayam", "Mee Rebus Sotong", "Nasi Goreng Kampung", "Tom Yum Sup", "Nasi Pattaya"]
  ];
+ for(let i=0;i<foods.length;i++){
+    console.log(foods[i].length);
+ }
  let foodFiles = [
-    ["cchop.png", "scarbonara.png", "sbolognese.png", "mspaghetti.png", "lchop.png", "burger.png", "jsausage.png", "steak.png"],
-    ["cchop.png", "spaghetti.png", "lchop.png", "burger.png", "jsausage.png", "sbiasa.png", "scheese.png", "striplecheese.png", "ssausage.png", "srice.png", "ngayam.png", "ngdaging.png", "ngbiasa.png", "ngthai.png", "ngpadicili.png", "ngpattaya.png", "ngorengbiasa.png", "mgorengayam.png", "mgorengdaging.png", "mgorengpattaya.png", "rkosong.png", "rtelur.png", "rtisu.png", "rplanta.png", "rsburung.png"],
-    ["mvege.png", "mnon-vege.png", "svege.png"],
-    ["ngtomyam.png", "mgtomyam.png", "tsoup.png", "ngpattaya.png", "rkosong.png", "rtelur.png", "rtisu.png", "rplanta.png", "rsburung.png"],
-    ["americano.png", "cappuccino.png", "latte.png", "mocha.png", "lice.png", "iblendedcappuccino.png", "iblendedmocha.png", "hchocolate.png", "hmatcha.png", "cice.png", "mice.png", "vice.png", "iblendedchocolate.png", "iblendedmatcha.png", "iblendedvanilla.png"],
-    ["vspanishfrappé.png", "mspanishfrappé.png", "sspanishfrappé.png", "rfrappé.png", "rlatte.png", "rchamlatte.png", "pspicefrappé.png", "pspiceblack.png", "bbcroissant.png", "pswaffle.png", "zcurrypuff.png", "tychickenpuff.png", "croll.png", "csandcheesecroissant.png", "mcdeluxe.png", "sdonut.png"],
-    ["nlrendang.png", "ngusa.png", "nppayam.png", "mrsotong.png", "ngkampung.png", "tysup.png", "npattaya.png"]
+    ["chicken_chop.jpeg", "spaghetti_carbonara.jpeg", "spaghetti_bolognese.jpeg", "mushroom_spaghetti.jpeg", "lamb_chop.jpeg", "burger.jpg", "jumbo_sausage.jpeg", "steak.jpeg"],
+    ["chicken_chop.jpeg", "spaghetti.jpeg", "lamb_chop.jpg", "burger.jpeg", "jumbo_sausage.jpg", "shawarma_biasa.jpeg", "shawarma_cheese.jpeg", "shawarma_sausage.jpg", "shawarma_rice.jpeg", "nasi_goreng_paprik_ayam.jpeg", "nasi_goreng_paprik_daging.jpeg", "nasi_goreng_biasa.jpeg", "nasi_goreng_thai.jpg", "nasi_goreng_cili_padi.jpeg", "nasi_goreng_pataya.jpg", "maggie_goreng_biasa.jpeg", "maggie_goreng_ayam.jpg", "maggie_goreng_daging.jpeg", "maggie_goreng_pataya.jpeg", "roti_kosong.jpg", "roti_telur.jpg", "roti_tissue.webp", "roti_planta.jpg", "roti_sarang_burung.jpg"],
+    ["malatang (vege).jpg", "malatang (non vege).jpg", "supabowl.jpeg"],
+    ["nasi goreng tomyam.jpg", "maggi goreng tomyam.jpeg", "soup tomyam.jpg", "nasi gorreng pattaya.webp", "roti kososng.webp", "roti telur.webp", "roti tisu.jpg", "roti planta.jpg", "roti sarang burung.jpg"],
+    ["americano.png", "cappucino.png", "latte.png", "mocha.png", "latte_ice.png", "iceblend_cappuccino.png", "iceblend_mocha.png", "hotchocolate.png", "hotmatcha.png", "chocolate_ice.png", "matcha_ice.png", "vanilla_ice.png", "iceblend_chocolate.png", "iceblend_matcha.png", "iceblend_vanilla.png"],
+    ["vietnamese_spanish_latte_frappe.png", "mango_spanish_frappe.png", "spanish_latte_frappe.png", "ro-ro-rosie_frappe.png", "rosie_latte.png", "rosie_cham_latte.png", "pumpkin_spice_frappe.png", "pumpkin_spice_black.png", "big_brekkie_croissant.png", "pearl_sugar_waffle.png", "zus_signature_curry_puff.png", "tom_yum_chicken_puff.png", "chocolate_roll.png", "chicken_slice_cheese_croissant.png", "mushroom_chicken_deluxe.png", "strawberry_donut.png"],
+    ["nasi goreng usa.jpg", "nasi putih + ayam paprik.jpg", "mee rebus sotong.jpg", "nasi goreng kampung.jpg", "tomyam soup.webp", "nasi goreng pattaya.jpg"]
 ];
+for(let i=0;i<foodFiles.length;i++){
+    console.log(foodFiles[i].length);
+ }
+
 let foodCost = [
     [6.90, 5.00, 5.00, 5.00, 8.90, 3.00, 4.90, 10.90], 
     [7.90, 6.00, 9.90, 4.00, 5.00, 5.90, 6.90, 7.90, 6.50, 8.90, 6.50, 8.00, 5.00, 6.00, 4.50, 5.00, 4.00, 6.00, 7.50, 5.50, 1.50, 2.50, 6.00, 3.00, 5.50],
     [6.90, 7.90, 6.50],
     [5.50, 5.50, 5.00, 5.00, 1.50, 2.50, 6.50, 2.50, 6.00],
     [6.90, 9.90, 9.90, 9.90, 9.90, 10,90, 10,90, 8,90, 8.90, 10.90, 10.90, 11.90, 11.90, 12.90, 11.90],
-    [14.90, 14.90,14.90, 14.90, 12.90, 12.90, 14.90, 12.90, 7.90, 8.90, 3.90, 5.90, 4.50, 10.90, 6.00, 6.50]
+    [14.90, 14.90,14.90, 14.90, 12.90, 12.90, 14.90, 12.90, 7.90, 8.90, 3.90, 5.90, 4.50, 10.90, 6.00, 6.50],
     [18.90, 14.90, 12.90, 13.90, 8.90, 7.90, 8.90]
  ]; 
 let drinks= ["Teh Tarik", "Teh O", "Kopi", "Sirap Bandung", "Milo", "Air Mata Kucing", "Lemon Tea", "Cincau", "Fruit Juices", "Iced Coffee", "Iced Tea"];
@@ -108,8 +116,9 @@ shopnames.forEach(function(shopname,index){
             foodboxs.appendChild(foodbox);
 
             let foodimage=document.createElement("img");
-            foodimage.src=foodFiles[index][j];
+            foodimage.src="/Food pictures/"+shopfiles[index]+"/"+foodFiles[index][j];
             foodimage.width="180";
+            foodimage.style.margin="10px";
             foodbox.appendChild(foodimage);
 
             let foodname=document.createElement("p");
