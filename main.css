@@ -202,3 +202,22 @@ dialog{
     color:white;
     cursor: pointer;
 }
+.box{
+    width:250px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid black;
+}
+.main2{
+    margin:45px;
+    margin-top: 150px;
+    min-width: 1300px;
+    min-height: 500px;
+}
+#allfoodbox,#alldrinkbox{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    flex-wrap: wrap;
+}

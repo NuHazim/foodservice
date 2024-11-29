@@ -17,9 +17,6 @@ let foods= [
     ["Vietnamese Spanish Latté Frappé", "Mango Spanish Frappé", "Spanish Latté Frappé", "Ro-Ro-Rosie Frappé", "Rosie Latté", "Rosie Cham Latté", "Pumpkin Spice Frappé", "Pumpkin Spice Black", "Big Brekkie Croissant", "Pearl Sugar Waffle", "ZUS Signature Curry Puff", "Tom Yum Chicken Puff", "Chocolate Roll", "Chicken Slice & Cheese Croissant", "Mushroom Chicken Deluxe", "Strawberry Donut"],
     ["Nasi Goreng USA", "Nasi Putih + Paprik Ayam", "Mee Rebus Sotong", "Nasi Goreng Kampung", "Tom Yum Sup", "Nasi Pattaya"]
  ];
- for(let i=0;i<foods.length;i++){
-    console.log(foods[i].length);
- }
  let foodFiles = [
     ["chicken_chop.jpeg", "spaghetti_carbonara.jpeg", "spaghetti_bolognese.jpeg", "mushroom_spaghetti.jpeg", "lamb_chop.jpeg", "burger.jpg", "jumbo_sausage.jpeg", "steak.jpeg"],
     ["chicken_chop.jpeg", "spaghetti.jpeg", "lamb_chop.jpg", "burger.jpeg", "jumbo_sausage.jpg", "shawarma_biasa.jpeg", "shawarma_cheese.jpeg", "shawarma_sausage.jpg", "shawarma_rice.jpeg", "nasi_goreng_paprik_ayam.jpeg", "nasi_goreng_paprik_daging.jpeg", "nasi_goreng_biasa.jpeg", "nasi_goreng_thai.jpg", "nasi_goreng_cili_padi.jpeg", "nasi_goreng_pataya.jpg", "maggie_goreng_biasa.jpeg", "maggie_goreng_ayam.jpg", "maggie_goreng_daging.jpeg", "maggie_goreng_pataya.jpeg", "roti_kosong.jpg", "roti_telur.jpg", "roti_tissue.webp", "roti_planta.jpg", "roti_sarang_burung.jpg"],
@@ -29,18 +26,15 @@ let foods= [
     ["vietnamese_spanish_latte_frappe.png", "mango_spanish_frappe.png", "spanish_latte_frappe.png", "ro-ro-rosie_frappe.png", "rosie_latte.png", "rosie_cham_latte.png", "pumpkin_spice_frappe.png", "pumpkin_spice_black.png", "big_brekkie_croissant.png", "pearl_sugar_waffle.png", "zus_signature_curry_puff.png", "tom_yum_chicken_puff.png", "chocolate_roll.png", "chicken_slice_cheese_croissant.png", "mushroom_chicken_deluxe.png", "strawberry_donut.png"],
     ["nasi goreng usa.jpg", "nasi putih + ayam paprik.jpg", "mee rebus sotong.jpg", "nasi goreng kampung.jpg", "tomyam soup.webp", "nasi goreng pattaya.jpg"]
 ];
-for(let i=0;i<foodFiles.length;i++){
-    console.log(foodFiles[i].length);
- }
 
 let foodCost = [
     [6.90, 5.00, 5.00, 5.00, 8.90, 3.00, 4.90, 10.90], 
-    [7.90, 6.00, 9.90, 4.00, 5.00, 5.90, 6.90, 7.90, 6.50, 8.90, 6.50, 8.00, 5.00, 6.00, 4.50, 5.00, 4.00, 6.00, 7.50, 5.50, 1.50, 2.50, 6.00, 3.00, 5.50],
+    [7.90, 6.00, 9.90, 4.00, 5.00, 5.90, 6.90, 7.90, 6.50, 8.90, 6.50, 8.00, 5.00, 6.00, 4.50, 5.00, 4.00, 6.00, 7.50, 5.50, 1.50, 2.50, 6.00, 5.50],
     [6.90, 7.90, 6.50],
     [5.50, 5.50, 5.00, 5.00, 1.50, 2.50, 6.50, 2.50, 6.00],
     [6.90, 9.90, 9.90, 9.90, 9.90, 10,90, 10,90, 8,90, 8.90, 10.90, 10.90, 11.90, 11.90, 12.90, 11.90],
     [14.90, 14.90,14.90, 14.90, 12.90, 12.90, 14.90, 12.90, 7.90, 8.90, 3.90, 5.90, 4.50, 10.90, 6.00, 6.50],
-    [18.90, 14.90, 12.90, 13.90, 8.90, 7.90, 8.90]
+    [18.90, 14.90, 12.90, 13.90, 8.90,8.90]
  ]; 
 let drinks= ["Teh Tarik", "Teh O", "Kopi", "Sirap Bandung", "Milo", "Air Mata Kucing", "Lemon Tea", "Cincau", "Fruit Juices", "Iced Coffee", "Iced Tea"];
 let drinkCost = [3.00, 2.00, 3.50, 3.00, 3.50, 4.00, 3.00, 3.50, 4.00, 3.50, 3.00];
