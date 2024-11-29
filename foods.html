@@ -18,16 +18,19 @@
     <input class="searchinput" placeholder="Search for restaurants..." type="search">
     <div class="main2">
         <h1>Foods:</h1>
-        <div id="allfoodbox">
-            <!-- <div class="box">
-                <img src="burger.jpg" width="200">
-                <h2 class="fname">Burger</h2>
-                <h2 class="fprice">RM 3.00</h2>
-                <h2 class="frestaurant">KK10</h2>
-            </div> -->
-        </div>
+        <div id="allfoodbox"></div>
         <h1>Drinks:</h1>
         <div id="alldrinkbox"></div>
+    </div>
+    <div class="cart" id="cart" style="display: none;">
+        <button class="minus" onclick="minus()">-</button>
+        <h1 id="quantity">0</h1>
+        <button class="plus" onclick="plus()">+</button>
+        <div class="rightalign">
+            <h1 id="name">Burger</h1>
+            <h1 id="restaurant">KK12</h1>
+            <button id="addCart" onclick="addCart()">Add to cart</button>
+        </div>
     </div>
     <script src="foods.js"></script>
 </body>

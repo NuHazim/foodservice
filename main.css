@@ -221,3 +221,33 @@ dialog{
     gap:20px;
     flex-wrap: wrap;
 }
+.cart{
+    position: fixed;
+    height: 80px;
+    background-color: white;
+    bottom:20px;
+    right:20px;
+    left:20px;
+    border:2px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: right;
+}
+.minus,.plus{
+    margin:20px;
+    font-size: 3em;
+    cursor: pointer;
+    border-radius: 50%;
+    width:60px;
+    height: 60px;
+}
+.rightalign{
+    margin-left: 950px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+}

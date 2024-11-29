@@ -44,8 +44,8 @@ for(let i=0;i<allfoods.length;i++){
     for(let j=0;j<allfoods[i].length;j++){
         let box=document.createElement("div");
         box.className="box";
-        box.dataset.foodname=allfoods[i][j];
-        box.dataset.foodprice=allfoodcost[i][j];
+        box.dataset.name=allfoods[i][j];
+        box.dataset.price=allfoodcost[i][j];
         box.dataset.restaurant=shopfiles[i];
         allfoodbox.appendChild(box);
 
@@ -76,8 +76,8 @@ for(let k=0;k<alldrinks.length;k++){
     for(let p=0;p<alldrinks[k].length;p++){
         let box=document.createElement("div");
         box.className="box";
-        box.dataset.drinkname=alldrinks[k][p];
-        box.dataset.drinkprice=alldrinkcost[k][p];
+        box.dataset.name=alldrinks[k][p];
+        box.dataset.price=alldrinkcost[k][p];
         box.dataset.restaurant=shop2files[k];
         alldrinkbox.appendChild(box);
 
@@ -102,3 +102,47 @@ for(let k=0;k<alldrinks.length;k++){
         box.appendChild(frestaurant);
     }
 }
+const cart=document.getElementById("cart");
+const boxes=document.querySelectorAll(".box");
+let names=document.getElementById("name");
+let restaurant=document.getElementById("restaurant");
+let quantity=document.getElementById("quantity");
+let count=1;
+let cartnames=[];
+let cartprices=[];
+let cartquantity=[];
+boxes.forEach(function(box){
+    box.addEventListener("click",function(){
+        cart.style.display="flex";
+        names.textContent=box.dataset.name;
+        restaurant.textContent=box.dataset.restaurant;
+        cart.dataset.price=box.dataset.price;
+        count=1;
+        quantity.textContent=count; 
+    })
+});
+function minus(){
+    count--;
+    quantity.textContent=count;
+}
+function plus(){
+    count++;
+    quantity.textContent=count;
+}
+function addCart(){
+    cartnames.push(names.textContent);
+    cartprices.push(cart.dataset.price);
+    cartquantity.push(quantity.textContent);
+    cart.style.display="none";
+}
+console.log(cartnames);
+console.log(cartprices);
+console.log(cartquantity);
+// boxes.forEach(function(box){
+//     box.addEventListener("click",function(){
+//         let sum=localStorage.getItem("sum")||0;
+//         sum=parseFloat(sum)+parseFloat(box.dataset.price);
+//         localStorage.setItem("sum",sum);
+//         console.log(sum);
+//     })
+// });
