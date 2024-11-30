@@ -223,6 +223,7 @@ dialog{
 }
 .cart{
     position: fixed;
+    z-index: 2;
     height: 80px;
     background-color: white;
     bottom:20px;
@@ -250,4 +251,61 @@ dialog{
     flex-direction: row;
     gap:20px;
     align-items: center;
+}
+#seecart{
+    font-size: 2em;
+    padding:10px 30px;  
+    border-radius: 20px;
+    background-color: white;
+    cursor:pointer;
+    position: fixed;
+    bottom:120px;
+    right:20px;
+}
+#cartlist{
+    width:700px;
+    height:600px;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.checkout{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    font-size: 2em;
+    text-decoration: none;
+}
+.checkout:hover{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    font-size: 2em;
+    color: black;
+    text-decoration: underline;
+}
+.profile{
+    grid-column: 1/5;
+    grid-row: 1/end;
+    text-align: center;
+    border-radius: 20px;
+    border:3px solid black;
+    margin:10px;
+    background-color:#f8e0bd ;
+}
+.receipt{
+    grid-column:5/end ;
+    grid-row: 1/end;
+}
+.receiptlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftalign{
+    display: flex;
+    flex-direction: row;
 }

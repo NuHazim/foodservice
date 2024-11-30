@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function backtozero(){
+            localStorage.setItem("cartnames", JSON.stringify([]));
+            localStorage.setItem("cartprices", JSON.stringify([]));
+            localStorage.setItem("cartquantity", JSON.stringify([]));
+        }
+        window.onload=backtozero;
+    </script>
 </head>
 <body>
     <div class="header">
         <a href="main.html"><button class="checked">Home</button></a>
         <a href="shops.html"><button class="buttons">Shops</button></a>
         <a href="foods.html"><button class="buttons">Foods</button></a>
-        <a href="activity.html"><button class="buttons">Activity</button></a>
         <a href="logout.html"><button class="buttonsspeacial">Logout</button></a>
         <img src="image1.png" width="80" height="80" style="border-radius: 50%;margin-bottom:20px;cursor:pointer;">
     </div>  

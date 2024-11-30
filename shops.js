@@ -107,6 +107,9 @@ shopnames.forEach(function(shopname,index){
         for(let j=0;j<foods[index].length;j++){
             let foodbox=document.createElement("div");
             foodbox.className="foodbox";
+            foodbox.dataset.name=foods[index][j];
+            foodbox.dataset.price=foodCost[index][j];
+            foodbox.dataset.restaurant=
             foodboxs.appendChild(foodbox);
 
             let foodimage=document.createElement("img");
@@ -149,3 +152,4 @@ closeDialog.addEventListener('click', () => {
     drinkboxs.innerHTML="";
     dialog.close();
 });
+//start here

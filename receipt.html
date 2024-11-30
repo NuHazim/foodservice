@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="header"></div>
+    <div class="main" style="background-color: bisque;padding:20px;">
+        <div class="profile" >
+            <h1 id="username">Nufail</h1>
+            <img src="image1.png" style="border-radius: 50%;">
+            <h2 id="email">something@gmail.com</h2>
+            <h2>💳 Campus eat balance</h2>
+            <h2>Student</h2>
+        </div>
+        <div class="receipt" style="background-color: white;padding:10px;">
+            <h1>Your order:</h1>
+            <div id="receiptlists"></div>
+            <hr>
+            <div style="display:flex;flex-direction: row;justify-content: right;">
+                <h2>Subtotal:</h2>
+                <h2 id="sum"></h2>
+            </div>
+            <div style="text-align: right;">
+                <h2>Processing Fee: RM 2.00</h2>
+            </div>
+            <div style="display:flex;flex-direction: row;justify-content: right;">
+                <h1>Total:</h1>
+                <h1 id="actualsum"></h1>
+            </div>
+        </div>
+    </div>
+    <script src="receipt.js"></script>
+</body>
+</html>

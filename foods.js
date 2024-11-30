@@ -102,47 +102,127 @@ for(let k=0;k<alldrinks.length;k++){
         box.appendChild(frestaurant);
     }
 }
-const cart=document.getElementById("cart");
-const boxes=document.querySelectorAll(".box");
-let names=document.getElementById("name");
-let restaurant=document.getElementById("restaurant");
-let quantity=document.getElementById("quantity");
-let count=1;
-let cartnames=[];
-let cartprices=[];
-let cartquantity=[];
-boxes.forEach(function(box){
-    box.addEventListener("click",function(){
-        cart.style.display="flex";
-        names.textContent=box.dataset.name;
-        restaurant.textContent=box.dataset.restaurant;
-        cart.dataset.price=box.dataset.price;
-        count=1;
-        quantity.textContent=count; 
-    })
+const cart = document.getElementById("cart");
+const boxes = document.querySelectorAll(".box");
+let names = document.getElementById("name");
+let restaurant = document.getElementById("restaurant");
+let quantity = document.getElementById("quantity");
+let count = 1;
+
+// Initialize cart data from localStorage or start with empty arrays
+let cartnames = JSON.parse(localStorage.getItem("cartnames")) || [];
+let cartprices = JSON.parse(localStorage.getItem("cartprices")) || [];
+let cartquantity = JSON.parse(localStorage.getItem("cartquantity")) || [];
+
+const cartbox = document.getElementById("cartbox");
+let counter = cartnames.length; // Ensure counter starts from the correct point
+
+// Populate the cartbox with existing items in localStorage
+function loadCartItems() {
+    cartbox.innerHTML = ""; // Clear previous elements
+    for (let i = 0; i < cartnames.length; i++) {
+        createCartItem(i);
+    }
+}
+loadCartItems();
+
+// Function to create a cart item in the UI
+function createCartItem(index) {
+    let list = document.createElement("div");
+    list.className = "list";
+    list.setAttribute("data-index", index); // Add an index for easy removal
+    cartbox.appendChild(list);
+
+    let text1 = document.createElement("h2");
+    text1.textContent = cartnames[index];
+    list.appendChild(text1);
+
+    let text2 = document.createElement("h2");
+    text2.textContent = cartquantity[index] + "x RM " + (cartquantity[index] * cartprices[index]).toFixed(2);
+    list.appendChild(text2);
+
+    // Create a remove button
+    let removeBtn = document.createElement("button");
+    removeBtn.className="x;"
+    removeBtn.textContent = "X";
+    removeBtn.addEventListener("click", function () {
+        removeCartItem(index);
+    });
+    list.appendChild(removeBtn);
+}
+
+// Remove a cart item
+function removeCartItem(index) {
+    // Remove item from arrays
+    cartnames.splice(index, 1);
+    cartprices.splice(index, 1);
+    cartquantity.splice(index, 1);
+
+    // Update localStorage
+    localStorage.setItem("cartnames", JSON.stringify(cartnames));
+    localStorage.setItem("cartprices", JSON.stringify(cartprices));
+    localStorage.setItem("cartquantity", JSON.stringify(cartquantity));
+
+    // Reload cart items
+    loadCartItems();
+}
+
+boxes.forEach(function (box) {
+    box.addEventListener("click", function () {
+        cart.style.display = "flex";
+        names.textContent = box.dataset.name;
+        restaurant.textContent = box.dataset.restaurant;
+        cart.dataset.price = box.dataset.price;
+        count = 1;
+        quantity.textContent = count;
+    });
 });
-function minus(){
-    count--;
-    quantity.textContent=count;
+
+function minus() {
+    if (count > 1) {
+        count--;
+        quantity.textContent = count;
+    }
 }
-function plus(){
+
+function plus() {
     count++;
-    quantity.textContent=count;
+    quantity.textContent = count;
 }
-function addCart(){
+
+function addCart() {
+    // Add new data to the arrays
     cartnames.push(names.textContent);
-    cartprices.push(cart.dataset.price);
-    cartquantity.push(quantity.textContent);
-    cart.style.display="none";
+    cartprices.push(Number(cart.dataset.price));
+    cartquantity.push(Number(quantity.textContent));
+    cart.style.display = "none";
+
+    // Update localStorage
+    localStorage.setItem("cartnames", JSON.stringify(cartnames));
+    localStorage.setItem("cartprices", JSON.stringify(cartprices));
+    localStorage.setItem("cartquantity", JSON.stringify(cartquantity));
+
+    // Create new cart item
+    createCartItem(cartnames.length - 1);
 }
-console.log(cartnames);
-console.log(cartprices);
-console.log(cartquantity);
-// boxes.forEach(function(box){
-//     box.addEventListener("click",function(){
-//         let sum=localStorage.getItem("sum")||0;
-//         sum=parseFloat(sum)+parseFloat(box.dataset.price);
-//         localStorage.setItem("sum",sum);
-//         console.log(sum);
-//     })
-// });
+
+// Modal functionality
+const seecart = document.getElementById("seecart");
+const cartlist = document.getElementById("cartlist");
+const closecart = document.getElementById("closecart");
+
+seecart.addEventListener("click", function () {
+    cartlist.showModal();
+});
+
+closecart.addEventListener("click", function () {
+    cartlist.close();
+});
+const checkoutdialog=document.getElementById("checkoutdialog");
+function checkout(){
+    cartlist.close();
+    checkoutdialog.style.display="flex";
+}
+document.getElementById("closecheckout").onclick=function(){
+    checkoutdialog.style.display="none";
+}
