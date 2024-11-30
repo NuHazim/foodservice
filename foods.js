@@ -193,6 +193,7 @@ function plus() {
 function addCart() {
     // Add new data to the arrays
     cartnames.push(names.textContent);
+
     cartprices.push(Number(cart.dataset.price));
     cartquantity.push(Number(quantity.textContent));
     cart.style.display = "none";
@@ -225,4 +226,41 @@ function checkout(){
 }
 document.getElementById("closecheckout").onclick=function(){
     checkoutdialog.style.display="none";
+
+    cartprices.push(cart.dataset.price);
+    cartquantity.push(quantity.textContent);
+    cart.style.display="none";
+    console.log("Item added to cart");
+    showConfirmationBox();
+}
+function showConfirmationBox() {
+    const confirmationBox = document.createElement("div");
+    confirmationBox.id = "confirmationBox";
+    confirmationBox.style.position = "fixed";
+    confirmationBox.style.top = "10%";
+    confirmationBox.style.left = "50%";
+    confirmationBox.style.transform = "translate(-50%, -20%)";
+    confirmationBox.style.padding = "20px";
+    confirmationBox.style.border = "2px solid #ccc";
+    confirmationBox.style.borderRadius = "10px";
+    confirmationBox.style.backgroundColor = "#fff";
+    confirmationBox.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
+    confirmationBox.style.zIndex = "1000";
+    confirmationBox.innerHTML = `
+        <p>Do you want to proceed to the next step?</p>
+        <button onclick="proceedToNextPage()">Proceed</button>
+        <button onclick="cancelConfirmation()">Continue Ordering</button>
+    `;
+    document.body.appendChild(confirmationBox);
+}
+function proceedToNextPage() {
+    window.location.href = "diningOptions.html"; 
+}
+function cancelConfirmation() {
+    // Remove the confirmation box
+    const confirmationBox = document.getElementById("confirmationBox");
+    if (confirmationBox) {
+        confirmationBox.remove();
+    }
+
 }
